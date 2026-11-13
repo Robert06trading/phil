@@ -1,0 +1,11 @@
+.env
+data/*.db
+data/*.db-journal
+data/KILL_SWITCH
+data/models/
+logs/
+reports/
+backups/
+__pycache__/
+.pytest_cache/
+.ruff_cache/

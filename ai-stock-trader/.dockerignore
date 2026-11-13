@@ -1,0 +1,8 @@
+.env
+data/*.db
+data/KILL_SWITCH
+logs/
+reports/
+__pycache__/
+.pytest_cache/
+.ruff_cache/

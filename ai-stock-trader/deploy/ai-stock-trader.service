@@ -1,0 +1,15 @@
+# systemd unit: start the stack on boot (place in /etc/systemd/system/)
+[Unit]
+Description=AI Stock Trader (docker compose)
+Requires=docker.service
+After=docker.service network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/opt/ai-stock-trader
+ExecStart=/usr/bin/docker compose up -d --build
+ExecStop=/usr/bin/docker compose stop -t 60
+
+[Install]
+WantedBy=multi-user.target
